@@ -7,9 +7,9 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string) - 1):
         if roman_dict.get(roman_string[i], 0) == 0:
             return 0
-        if roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]:
-            int_sum -= roman_dict[roman_string[i]]
+        if i + 1 < len(roman_string):
+            if roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]:
+                int_sum -= roman_dict[roman_string[i]]
         else:
             int_sum += roman_dict[roman_string[i]]
-    int_sum += roman_dict[roman_string[i]]
     return int_sum
