@@ -1,34 +1,73 @@
->>> from 0-add_integer import add_integer
+The ``0-add_integer`` module
+======================
 
-Adds two integers.
+Using ``add_integer``
+-------------------
 
-a and b must be integers or floats, otherwise raise a TypeError.
-Floats are first casted to integers before addition.
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer`` module:
 
-Args:
-    a (int or float): first number
-    b (int or float, optional): second number, defaults to 98
+-------------------
 
-Returns:
-    int: the sum of a and b
+>>> add_integer = __import__('0-add_integer').add_integer
 
-Raises:
-    TypeError: if a or b are not integers or floats
 
-Examples:
-    >>> add_integer(1, 2)
-    3
-    >>> add_integer(100, -2)
-    98
-    >>> add_integer(2)
-    100
-    >>> add_integer(100.3, -2)
-    98
-    >>> add_integer(4, "School")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+# a = int, b = int
+>>> add_integer(5, 2)
+7
+
+# a = negative int, b =  int
+>>> add_integer(-5, 2)
+-3
+
+# a = 0, b = int
+>>> add_integer(0, 2)
+2
+
+# a = float, b = int
+>>> add_integer(1.2, 2)
+3
+
+# a = int, b = float
+>>> add_integer(1, 2.6)
+3
+
+# a = float, b = float
+>>> add_integer(5.9, 5.9)
+10
+
+# a = None, b = int
+>>> add_integer(None, 89)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# a = int, b = None
+>>> add_integer(89, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# a = None
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# a = str
+>>> add_integer('puppy')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# a = int, b = str
+>>> add_integer(5, 'doggo')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# a = str, b = str
+>>> add_integer('brekkie', 'dindin')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
