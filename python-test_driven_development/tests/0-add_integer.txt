@@ -1,3 +1,5 @@
+>>> from 0-add_integer import add_integer
+
 Adds two integers.
 
 a and b must be integers or floats, otherwise raise a TypeError.
