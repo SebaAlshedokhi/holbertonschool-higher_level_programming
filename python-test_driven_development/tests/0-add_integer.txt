@@ -1,0 +1,36 @@
+ ===========================
+How to Use 0-add_integer.py
+===========================
+
+Adds two integers.
+
+    a and b must be integers or floats, otherwise raise a TypeError.
+    Floats are first casted to integers before addition.
+
+    Args:
+        a (int or float): first number
+        b (int or float, optional): second number, defaults to 98
+
+    Returns:
+        int: the sum of a and b
+
+    Raises:
+        TypeError: if a or b are not integers or floats
+
+    Examples:
+        >>> add_integer(1, 2)
+        3
+        >>> add_integer(100, -2)
+        98
+        >>> add_integer(2)
+        100
+        >>> add_integer(100.3, -2)
+        98
+        >>> add_integer(4, "School")
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+        >>> add_integer(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
