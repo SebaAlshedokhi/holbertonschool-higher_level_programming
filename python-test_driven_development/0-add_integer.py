@@ -1,11 +1,24 @@
 #!/usr/bin/python3
-"""Defines an integer addition function"""
+"""
+
+Add Integer or Float Module
+
+"""
+
+
 def add_integer(a, b=98):
-    """Return the integer addition of a and b
-    Float arguments are typecasted to ints before addition is performed.
+    """
+    ADD Two integer a and b
+
+    Args:
+        a (int/float): first int
+        b (int/float): Second int
+
     Raises:
-        TypeError: If either of a or b is a non-integer and non-float.
-        OverflowError: If float infinity or NaN is passed.
+        TypeError: in case the arguments are not int or float
+
+    Return:
+        (int) : Sum of the int a and b
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
