@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class Square that defines a square"""
+"""class Square that defines a square."""
 
 
 class Square:
@@ -7,7 +7,7 @@ class Square:
     Private instance attributes: size and position """
     def __init__(self, size=0, position=(0, 0)):
         """
-        initializating size
+        Initialize square with size and position.
         """
         self.size = size
         self.position = position
@@ -38,12 +38,8 @@ class Square:
         return self.__size ** 2
         
     def my_print(self):
-        """Print the square using the '#' character.
-
-        If size is 0, prints an empty line. Otherwise, prints a square
-        pattern using '#' characters where each side has length equal to size.
-        leaves position[0] spaces a beginnig of each row
-        leaves position[1] lines before printing the square
+        """
+        Print the square with '#' characters based on size and position.
         """
         if self.__size == 0:
             print()
