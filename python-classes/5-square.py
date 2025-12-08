@@ -38,7 +38,9 @@ class Square:
         
     def my_print(self):
         """
-        prints in stdout the square with the character #
+        Print the square using the '#' character.
+        If size is 0, prints an empty line. Otherwise, prints a square
+        pattern using '#'
         """
         if self.__size == 0:
             print()
