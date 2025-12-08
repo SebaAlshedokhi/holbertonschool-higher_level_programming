@@ -37,16 +37,13 @@ class Square:
         return self.__size ** 2
         
     def my_print(self):
-        """
-        Prints the square using the '#' character.
+        """Print the square using the '#' character.
+
         If size is 0, prints an empty line. Otherwise, prints a square
         pattern using '#' characters where each side has length equal to size.
         """
         if self.__size == 0:
             print()
         else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end="")
-                if i != self.__size - 1:
-                    print()
+            for _ in range(self.__size):
+                print("#" * self.__size)
