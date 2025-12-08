@@ -2,7 +2,7 @@
 """
 a class Square that defines a square by: (based on 0-square.py)
 """
-class Square (Square):
+class Square:
 """
 initilize a private attribute size
 """
