@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-class Square that defines a square
-"""
+"""class Square that defines a square"""
 
 class Square:
     """
@@ -11,14 +9,14 @@ class Square:
 
     def __init__(self, size=0):
         """
-        size must be an integer,
-        otherwise raise a TypeError exception with the message size must be an integer
-        if size is less than 0, raise a ValueError exception
-        with the message size must be >= 0
+        check size if integer or not
+        then check size if less than zero
+        then assign size
         """
-        try:
-            self.__size = size
-        except TypeError:
-            print("size must be an integer")
+        if not isinstance(size, int)
+            raise TypeError("size must be an integer")
+            break
         if size < 0:
-            raise TypeError("size must be >= 0")
+            raise ValueError("size must be >= 0")
+            break
+        self.__size = size
