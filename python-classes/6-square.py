@@ -42,6 +42,8 @@ class Square:
 
         If size is 0, prints an empty line. Otherwise, prints a square
         pattern using '#' characters where each side has length equal to size.
+        leaves position[0] spaces a beginnig of each row
+        leaves position[1] lines before printing the square
         """
         if self.__size == 0:
             print()
@@ -64,6 +66,6 @@ class Square:
         setter to set the position
         check if it is integer or less than zero
         """
-        if not isinstance(self.value, int) or len(self.value) != 2:
-            if self.value[0] < 0 or self.value[0] < 0:
+        if not isinstance(value, tuple) or len(value) != 2:
+            if value[0] < 0 or value[1] < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
