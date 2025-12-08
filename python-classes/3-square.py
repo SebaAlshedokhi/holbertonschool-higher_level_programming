@@ -21,4 +21,5 @@ class Square:
         """
         returns the current square area
         """
-        return self.size * self.size
+        area = self.size ** 2
+        return area
