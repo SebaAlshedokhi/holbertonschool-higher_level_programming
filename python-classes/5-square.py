@@ -40,9 +40,9 @@ class Square:
         """
         prints in stdout the square with the character #
         """
-        if size == 0:
+        if self.__size == 0:
             print()
-        for i in range(5):
-            for j in range(5):
+        for i in range(self.__size):
+            for j in range(self.__size):
                 print("#", end="")
             print()
