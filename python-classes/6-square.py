@@ -59,8 +59,12 @@ class Square:
         return self.__size ** 2
         
     def my_print(self):
-        """
-        Print the square with '#' characters based on size and position.
+        """Print the square with position offset.
+
+        If size is 0, prints an empty line. Otherwise, prints the square
+        at the specified position using '#' characters. The position[1]
+        value adds vertical offset (newlines before), and position[0]
+        adds horizontal offset (spaces before each line).
         """
         if self.__size == 0:
             print()
