@@ -51,7 +51,6 @@ class Square:
                 not isinstance(value[1], int) or
                 value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-
         self.__position = value
         
     def area(self):
@@ -62,12 +61,12 @@ class Square:
         return self.__size ** 2
         
     def my_print(self):
-"""Print the square using the '#' character.
-If size is 0, prints an empty line.
-Otherwise, prints a square pattern using '#' characters
-where each side has length equal to size.
-leave position[0] spaces a beginnig of each row
-leave position[1] lines before printing the square"""
+        """Print the square using the '#' character.
+        If size is 0, prints an empty line.
+        Otherwise, prints a square pattern using '#' characters
+        where each side has length equal to size.
+        leave position[0] spaces a beginnig of each row
+        leave position[1] lines before printing the square"""
         if self.__size == 0:
             print()
         else:
