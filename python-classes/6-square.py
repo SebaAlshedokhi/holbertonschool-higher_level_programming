@@ -8,6 +8,8 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """
         Initialize square with size and position.
+        @size: size of square
+        @position: position of square
         """
         self.size = size
         self.position = position
@@ -16,7 +18,7 @@ class Square:
     def size(self):
         """
         to retrieve the size
-        return size
+        return: size
         """
         return self.__size
 
@@ -25,6 +27,7 @@ class Square:
         """
         setter to set the size
         check if it is integer or less than zero
+        raise: TypeError and ValueError
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -36,7 +39,7 @@ class Square:
     def position(self):
         """
         to retrieve the position
-        return position
+        return: position
         """
         return self.__position
         
@@ -45,6 +48,7 @@ class Square:
         """
         setter to set the position
         check if it is integer or less than zero
+        raise: TypeError
         """
         if (not isinstance(value, tuple) or len(value) != 2 or
                 not isinstance(value[0], int) or
@@ -56,7 +60,7 @@ class Square:
     def area(self):
         """
         calculate the Area
-        return the current square area
+        return: the current square area
         """
         return self.__size ** 2
         
