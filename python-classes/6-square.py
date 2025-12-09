@@ -16,6 +16,7 @@ class Square:
     def size(self):
         """
         to retrieve the size
+        return size
         """
         return self.__size
 
@@ -35,6 +36,7 @@ class Square:
     def position(self):
         """
         to retrieve the position
+        return position
         """
         return self.__position
         
@@ -54,18 +56,18 @@ class Square:
         
     def area(self):
         """
-        returns the current square area
+        calculate the Area
+        return the current square area
         """
         return self.__size ** 2
         
     def my_print(self):
-        """Print the square with position offset.
-
-        If size is 0, prints an empty line. Otherwise, prints the square
-        at the specified position using '#' characters. The position[1]
-        value adds vertical offset (newlines before), and position[0]
-        adds horizontal offset (spaces before each line).
-        """
+"""Print the square using the '#' character.
+If size is 0, prints an empty line.
+Otherwise, prints a square pattern using '#' characters
+where each side has length equal to size.
+leave position[0] spaces a beginnig of each row
+leave position[1] lines before printing the square"""
         if self.__size == 0:
             print()
         else:
