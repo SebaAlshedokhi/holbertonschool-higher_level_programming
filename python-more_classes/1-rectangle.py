@@ -13,8 +13,8 @@ class Rectangle:
         Initializes a new Square instance.
         arguments are width and height
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
 
     @property
