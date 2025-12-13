@@ -87,5 +87,3 @@ class Rectangle:
         my_rectangle = "Rectangle(" + str(self.__width)
         my_rectangle += ", " + str(self.__height) + ")"
         return (my_rectangle)
-
-
