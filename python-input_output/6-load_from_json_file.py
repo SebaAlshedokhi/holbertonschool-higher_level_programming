@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """creates an Object"""
+import json
 
 
 def load_from_json_file(filename):
