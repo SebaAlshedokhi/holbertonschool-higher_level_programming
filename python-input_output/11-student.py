@@ -1,41 +1,23 @@
 #!/usr/bin/python3
-"""Module defining Student class with reload capability.
-
-This module provides a Student class with JSON serialization
-and deserialization (reload) functionality.
-"""
+"""defining Student class with reload capability"""
 
 
 class Student:
-    """Represent a student with serialization and reload.
-
-    Attributes:
-        first_name (str): Student's first name.
-        last_name (str): Student's last name.
-        age (int): Student's age.
+    """
+    represent a student with serialization and reload.
     """
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
-
-        Args:
-            first_name (str): Student's first name.
-            last_name (str): Student's last name.
-            age (int): Student's age.
+        """
+        initialize a new Student.
         """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """Return dictionary representation of Student.
-
-        Args:
-            attrs (list): List of attribute names to retrieve.
-                If None, retrieve all attributes.
-
-        Returns:
-            dict: Dictionary containing requested attributes.
+        """
+        return dictionary representation of Student.
         """
         if (isinstance(attrs, list) and
                 all(isinstance(attr, str) for attr in attrs)):
@@ -46,4 +28,9 @@ class Student:
             return result
         return self.__dict__
 
-   
+    def reload_from_json(self, json):
+        """
+        replace all attributes from dictionary.
+        """
+        for key, value in json.items():
+            setattr(self, key, value)
