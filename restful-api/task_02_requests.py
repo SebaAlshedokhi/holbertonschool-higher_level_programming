@@ -18,6 +18,7 @@ def fetch_and_save_posts():
     """
     fetches all post from JSONPlaceholder
     """
+    response = requests.get("https://jsonplaceholder.typicode.com/posts")
     if response.status_code == 200:
         data = response.json()
 
