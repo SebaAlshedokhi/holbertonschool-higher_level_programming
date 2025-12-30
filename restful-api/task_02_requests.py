@@ -36,4 +36,4 @@ def fetch_and_save_posts():
                 csvfile, fieldnames=["id", "title", "body"]
             )
             writer.writeheader()
-            writer.writerows(formatted_posts)
+            writer.writerows(posts_dict)
