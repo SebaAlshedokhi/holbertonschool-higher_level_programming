@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import request
+import csv
 
 
 def fetch_and_print_posts():
