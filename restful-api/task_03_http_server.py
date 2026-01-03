@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Python web server
-"""
+"""web server"""
 import http.server
 import socketserver
 import json
