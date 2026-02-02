@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const head = document.querySelector('header')
-const togg = document.querySelector('#toggle_header')
+const head = document.querySelector('header');
+const togg = document.querySelector('#toggle_header');
 
 tog.addEventListener('click', () => {
   if(head.classList.contains('red'))
