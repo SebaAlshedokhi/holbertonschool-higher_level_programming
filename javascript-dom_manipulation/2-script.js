@@ -1,9 +1,7 @@
 #!/usr/bin/node
+const header = document.querySelector('header');
+const redHeader = document.querySelector('#red_header');
 
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('https://hellosalut.stefanbohacek.com/?lang=fr')
-    .then(response=> response.json())
-    .then(data => {
-      document.querySelector('#hello').textContent = data.hello;
-    });
+redHeader.addEventListener('click', () => {
+  header.classList.add('red');
 });
