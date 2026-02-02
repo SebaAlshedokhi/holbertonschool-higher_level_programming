@@ -3,7 +3,7 @@
 const head = document.querySelector('header');
 const togg = document.querySelector('#toggle_header');
 
-tog.addEventListener('click', () => {
+togg.addEventListener('click', () => {
   if(head.classList.contains('red'))
   {
     head.classList.remove('red');
